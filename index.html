@@ -32,13 +32,16 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="carregarPagina('preparaCSV.html'); return false;">Prepara CSV</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="carregarPagina('relatorioLinhas3.html'); return false;">Relatório de Linhas</a>
-          </li>
-        </ul>
+  <li class="nav-item">
+    <a class="nav-link" href="#" onclick="mostrarPaginaPrincipal(); return false;">Página Inicial</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" onclick="carregarPagina('preparaCSV.html'); return false;">Prepara CSV</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" onclick="carregarPagina('RelatorioLinhas3.html'); return false;">Relatório de Linhas</a>
+  </li>
+</ul>
       </div>
     </div>
   </nav>
@@ -69,6 +72,14 @@
           document.getElementById('conteudo').innerHTML = "<p class='text-danger'>Erro ao carregar a página.</p>";
         });
     }
+
+
+    function mostrarPaginaPrincipal() {
+  document.getElementById('conteudo').innerHTML = `
+    <h3>Bem-vindo!</h3>
+    <p>Escolha uma das páginas no menu acima para carregar o conteúdo aqui.</p>
+  `;
+}
   </script>
 
 </body>
